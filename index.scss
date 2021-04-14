@@ -64,7 +64,7 @@
 // ║ Skin               ║ To disable certain things, you can comment out the lines. Use "// " in front.     ║
 // ╚════════════════════╩═══════════════════════════════════════════════════════════════════════════════════╝
 
-@use "./skins/community/style.scss"; // ✔️ Commmunity Edition (Rubine Red)
+//@use "./skins/community/style.scss"; // ✔️ Commmunity Edition (Rubine Red)
 
 //@use "./skins/crimson/style.scss"; // ❌ Crimson Edition (Red)
 
@@ -98,17 +98,19 @@
 
 //@use "./skins/nebula/style.scss"; // ❌ Nebula Edition
 
+@use "./skins/saurich/style.scss"; // ❌ Saurich
+
 // ╔════════════════════╦═══════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Addons             ║ To disable certain things, you can comment out the lines. Use "// " in front.     ║
 // ╚════════════════════╩═══════════════════════════════════════════════════════════════════════════════════╝
 
-@use "./addons/name-badges.scss"; // ❌ (Disabled by default) by LuckFire#4800
+//@use "./addons/name-badges.scss"; // ❌ (Disabled by default) by LuckFire#4800
 
-//@use "./addons/drag.scss"; // ✔️ (enabled by default)
+@use "./addons/drag.scss"; // ✔️ (enabled by default)
 
 @use "./addons/usrbg.scss"; // ✔️ (enabled by default) by Gibbu#1211 & Tropical#4355 
 
-//@use "./addons/radial-status.scss"; // ❌ (Disabled by default) by Gibbu#1211
+@use "./addons/radial-status.scss"; // ❌ (Disabled by default) by Gibbu#1211
 
 //@use "./addons/chat-bubbles.scss"; // ❌ (disabled by default)
 
@@ -122,9 +124,11 @@
 
 //@use "./addons/white-porkcord.scss"; // ❌ (disabled by default)
 
-//@use "./addons/offline-mode.scss"; // ✔️ (enabled by default)
+@use "./addons/offline-mode.scss"; // ✔️ (enabled by default)
 
 @use "./addons/left-icons.scss"; // ✔️ (enabled by default)
+
+@use "./addons/modern-channel-indicators.scss";
 
 @use "./addons/recolor.scss"; // ✔️ (enabled by default)
 
@@ -160,9 +164,9 @@
 // ║ Remove             ║ To disable certain things, you can comment out the lines. Use "// " in front.     ║
 // ╚════════════════════╩═══════════════════════════════════════════════════════════════════════════════════╝
 
-//@use "./addons/remove/remove-gift-button.scss"; // ❌ (disabled by default)
+@use "./addons/remove/remove-gift-button.scss"; // ❌ (disabled by default)
 
-//@use "./addons/remove/remove-gif-button.scss"; // ❌ (disabled by default)
+@use "./addons/remove/remove-gif-button.scss"; // ❌ (disabled by default)
 
 //@use "./addons/remove/remove-sticker-button.scss"; // ❌ (disabled by default)
 
@@ -184,7 +188,7 @@
 
 //@use "./addons/emoji/emoji-facebook.scss"; // ❌ (disabled by default)
 
-//@use "./addons/emoji/emoji-apple.scss"; // ❌ (disabled by default)
+@use "./addons/emoji/emoji-apple.scss"; // ❌ (disabled by default)
 
 // ╔════════════════════╦═══════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ SRC                ║ Do not comment out these lines! By disabling the theme can not work correctly.    ║
@@ -351,9 +355,9 @@
 --background-mobile-primary: rgba(#{hexToRGB(style.$D016)});
 --background-mobile-secondary: rgba(#{hexToRGB(style.$D017)});
 
---background-modifier-hover: rgba(#{hexToRGB(style.$D002)});
+--background-modifier-hover: rgba(#{hexToRGB(style.$D029)});
 --background-modifier-active: rgba(#{hexToRGB(style.$D001)});
---background-modifier-selected: rgba(#{hexToRGB(style.$D001)});
+--background-modifier-selected: rgba(#{hexToRGB(style.$D029)}); // THIS >:(
 --background-modifier-accent: rgba(#{hexToRGB(style.$D016)});
 
 --background-mentioned: rgba(#{hexToRGB(style.$D001)}, 0.1);
@@ -371,7 +375,7 @@
 --toast-box-shadow: rgba(0, 0, 0, 0.400);
 
 // Header
---header-primary: rgba(#{hexToRGB(style.$D019)});
+--header-primary: rgba(#{hexToRGB(style.$D020)});
 --header-secondary: rgba(#{hexToRGB(style.$D021)});
 
 // Text
@@ -385,11 +389,11 @@
 // Interactive
 --interactive-normal: rgba(#{hexToRGB(style.$D020)});
 --interactive-hover: rgba(#{hexToRGB(style.$D019)});
---interactive-active: rgba(#{hexToRGB(style.$D019)});
+--interactive-active: rgba(#{hexToRGB(style.$D020)});
 --interactive-muted: rgba(#{hexToRGB(style.$D022)});
 
 // Spotify Color
---spotify-color: rgba(#{hexToRGB(style.$D001)});
+--spotify-color: rgba(#{hexToRGB(style.$D003)});
 
 // Scrollbar
 --scrollbar-thin-thumb: rgba(#{hexToRGB(style.$D016)});
@@ -417,9 +421,9 @@
 --logo-primary: var(--accent-primary);
 --focus-primary: var(--accent-primary);
 --radio-group-dot-foreground: var(--accent-primary);
---channeltextarea-background: rgba(#{hexToRGB(style.$D019)});
+--channeltextarea-background: rgba(#{hexToRGB(style.$D020)});
 --activity-card-background: var(--background-secondary);
---textbox-markdown-syntax: rgba(#{hexToRGB(style.$D019)});
+--textbox-markdown-syntax: rgba(#{hexToRGB(style.$D020)});
 
 // Selection
 --selection-text: rgba(#{hexToRGB(style.$D025)});
@@ -624,3 +628,32 @@
 // ╔════════════════════╦═══════════════════════════════════════════════════════════════════════[─]═[□]═[×]═╗
 // ║ Custom CSS         ║ Here you can insert custom CSS.                                                   ║
 // ╚════════════════════╩═══════════════════════════════════════════════════════════════════════════════════╝
+
+.lookFilled-1Gx00P.colorGreen-29iAKY {
+    color: #ffffff !important;
+    background: #f9b0c3 !important;
+}
+.lookFilled-1Gx00P:hover {
+    background: linear-gradient(to top right, #fbcabb, #f9b0c3, #e3abce, #ceb6d9, #a2c8ec) !important;
+}
+.circleIconButton-1QV--U {
+    color: #f9b0c3;
+}
+.circleIconButton-1QV--U.selected-1JjBPm {
+    color: #fff;
+    background: linear-gradient(to top right, #fbcabb, #f9b0c3, #e3abce, #ceb6d9, #a2c8ec);
+}
+.item-3HknzM:nth-child(5){
+    color: #ffffff !important;
+    background: linear-gradient(to top right, #fbcabb, #f9b0c3, #e3abce, #ceb6d9, #a2c8ec) !important;
+}
+.item-3HknzM:nth-child(5):hover{
+    color: #f9b0c3 !important;
+    background: #5c4d64 !important;
+}
+.rtcConnectionStatusConnected-VRZDjy {
+    color: #f9b0c3;
+}
+.buttonActive-3FrkXp {
+    background-color: #f9b0c3 !important;
+}
